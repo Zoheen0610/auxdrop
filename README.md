@@ -1,10 +1,9 @@
 ## Auxdrop: Understanding how AuxDrop works.
 
 This repository contains the re-implementation of the **Aux-Drop** model proposed in the paper *"Aux-Drop: Handling Haphazard Inputs in Online Learning Using Auxiliary Dropouts"* (Agarwal et al., TMLR 2023). The objective is to evaluate its performance on the **MAGIC Gamma Telescope dataset**.
----
-
 ## Problem Statement
 
+---
 Develop and optimize the **Aux-Drop** (Auxiliary Dropout) model to handle haphazard auxiliary input features in an online learning setting. The task includes:
 
 - Understanding the Aux-Drop Model
