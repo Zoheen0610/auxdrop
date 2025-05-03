@@ -37,17 +37,17 @@ number_of_experiments = 1
 # s - smoothing rate
 
 config = {
-    "n" : 0.1 ,
-    "aux_feat_prob" : 0.27,
-    "dropout_p" : 0.50,
+    "n" : 0.05 ,
+    "aux_feat_prob" : 0.30,
+    "dropout_p" : 0.30,
     "max_num_hidden_layers" : 6,
-    "qtd_neuron_per_hidden_layer" : 50,
+    "qtd_neuron_per_hidden_layer" : 64,
     "n_classes" : 2,
     "aux_layer" : 3,
     "n_neuron_aux_layer" : 100,
     "batch_size" : 1,
-    "b" : 0.99,
-    "s" : 0.2,
+    "b" : 0.9,
+    "s" : 0.1,
     "use_cuda" : False
 }
 
