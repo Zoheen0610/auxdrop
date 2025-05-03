@@ -20,8 +20,6 @@ Develop and optimize the **Aux-Drop** (Auxiliary Dropout) model to handle haphaz
 - `preprocessing.py` — Preprocessing and feature separation logic for MAGIC dataset.
 - `train.py` — Script to train and evaluate the model online.
 - `eda.ipynb` — Exploratory Data Analysis notebook on MAGIC dataset.
-- `config.json` — Configuration file for model hyperparameters.
-- `README.md` — This file.
 
 ---
 
