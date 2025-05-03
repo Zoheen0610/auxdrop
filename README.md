@@ -1,23 +1,32 @@
-# auxdrop
-Understanding how AuxDrop works and implementing it on my own.
-# Task 3: Aux-Drop Model Implementation and Optimization
+## Auxdrop: Understanding how AuxDrop works.
 
-This repository contains my implementation and optimization of the **Aux-Drop** model for online learning, as part of Round 3 of the internship selection process. The model is evaluated on the **MAGIC Gamma Telescope** dataset.
-
+This repository contains the re-implementation of the **Aux-Drop** model proposed in the paper *"Aux-Drop: Handling Haphazard Inputs in Online Learning Using Auxiliary Dropouts"* (Agarwal et al., TMLR 2023). The objective is to evaluate its performance on the **MAGIC Gamma Telescope dataset**.
 ---
 
-## 📌 Problem Statement
+## Problem Statement
 
 Develop and optimize the **Aux-Drop** (Auxiliary Dropout) model to handle haphazard auxiliary input features in an online learning setting. The task includes:
 
+- Understanding the Aux-Drop Model
 - Reimplementing the Aux-Drop architecture from scratch in PyTorch.
 - Performing Exploratory Data Analysis (EDA) on the MAGIC dataset.
 - Tuning model and training parameters.
-- Evaluating performance and explaining design decisions.
 
 ---
 
-## 📊 Dataset
+
+## Project Structure
+
+- `model.py` — PyTorch implementation of the Aux-Drop model.
+- `preprocessing.py` — Preprocessing and feature separation logic for MAGIC dataset.
+- `train.py` — Script to train and evaluate the model online.
+- `eda.ipynb` — Exploratory Data Analysis notebook on MAGIC dataset.
+- `config.json` — Configuration file for model hyperparameters.
+- `README.md` — This file.
+
+---
+
+## Dataset
 
 **MAGIC Gamma Telescope Dataset**  
 - Binary classification task (Gamma vs. Hadron).
@@ -26,35 +35,30 @@ Develop and optimize the **Aux-Drop** (Auxiliary Dropout) model to handle haphaz
 
 ---
 
-## 🧠 Model Overview
+## Model Overview
 
 The **Aux-Drop** model enhances robustness in online learning by:
 - Incorporating **auxiliary features** that may be intermittently missing.
 - Using **auxiliary dropout**, a variant of dropout tailored to the presence of auxiliary features.
 - Weighting predictions from intermediate layers using learnable α parameters.
 
-### Key Features:
-- Online (SGD-based) learning.
-- Layer-wise predictions.
-- Custom label smoothing loss.
-- Haphazard auxiliary input handling.
-
 ---
+## References
+Aux-Drop: Handling Haphazard Inputs in Online Learning Using Auxiliary Dropouts — Agarwal et al., Transactions on Machine Learning Research, 2023.
 
-## 🛠 Configuration (config.json)
+MAGIC Dataset on UCI Repository
 
-```json
-{
-  "n": 0.01,
-  "aux_feat_prob": 0.3,
-  "dropout_p": 0.3,
-  "max_num_hidden_layers": 4,
-  "qtd_neuron_per_hidden_layer": 64,
-  "n_classes": 2,
-  "aux_layer": 2,
-  "n_neuron_aux_layer": 128,
-  "batch_size": 1,
-  "b": 0.9,
-  "s": 0.1,
-  "use_cuda": true
+## Citation
+@article{agarwal2023auxdrop,
+  title={Aux-Drop: Handling Haphazard Inputs in Online Learning Using Auxiliary Dropouts},
+  author={Rohit Agarwal and Deepak Gupta and Alexander Horsch and Dilip K. Prasad},
+  journal={Transactions on Machine Learning Research},
+  issn={2835-8856},
+  year={2023},
+  url={https://openreview.net/forum?id=R9CgBkeZ6Z},
+  note={Reproducibility Certification}
 }
+
+## Acknowledgements
+Special thanks to the authors of the original paper for making the work open-source and reproducible.
+
